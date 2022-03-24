@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.224.3/containers/ubuntu
+{
+	"name": "yt-dlp-example-dev",
+	"build": {
+		"dockerfile": "Dockerfile.dev",
+		"context": "..",
+		"args": { "VARIANT": "focal" }
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+
+	//Change the name of the dev container to make it easier to tweak from the host
+	"runArgs": ["--name=yt-dlp-example-dev"],
+
+	"shutdownAction": "stopContainer",
+
+	// Mount our host home directory so we can download the stream
+	"mounts": ["source=${localEnv:HOME},target=/host-home,type=bind,consistency=cached"],
+
+}
