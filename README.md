@@ -42,9 +42,9 @@ How to use a devContainer backup your stream from YouTube to your local disk usi
     303 webm  1920x1080   60 │    4.51GiB 1251k https │ vp9         1251k video only              1080p60, webm_dash
     ````
 1. Choose your preferred video and format.  We'll pick #299 since we just want to see the video
-````bash
-yt-dlp --format 299 https://www.youtube.com/watch?v=82rbJlLUPCs --concurrent-fragments 5
-````
+    ````bash
+    yt-dlp --format 299 https://www.youtube.com/watch?v=82rbJlLUPCs --concurrent-fragments 5
+    ````
 1. Wait for video to finish downloading
 
 
